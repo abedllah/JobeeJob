@@ -4,7 +4,6 @@ import './index.css';
 import Navbar from './Component/Navbar';
 import CreatePost from './Component/CreatePost';
 import JobListings from './Component/JobListings';
-import MyBowls from './Component/MyBowls';
 
 // Bowl de gauche (Suggestions)
 const LeftBowl = () => {
@@ -100,7 +99,6 @@ root.render(
       {/* Colonne droite - Bowl des pubs/trends (20%) */}
       <div className="w-1/5">
         <RightBowl />
-        <MyBowls />
       </div>
     </div>
   </React.StrictMode>
