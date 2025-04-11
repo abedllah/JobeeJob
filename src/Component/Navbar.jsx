@@ -15,24 +15,24 @@ const Navbar = () => {
           
         {/* Partie centrale - Liens de navigation */}
         <div className="flex items-center space-x-6">
-          <a href="#" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
-            community
+          <a href="/" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
+            Community
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="internships" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
+           Internships
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="/jobs" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
+            Jobs
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="/courses" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
+          Courses
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
-            stagiaire
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
-            companies
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
-            salaire
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#" className="text-base font-medium text-[#14a970] cursor-pointer relative group">
-            cours
+          Videos
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffc108] transition-all duration-300 group-hover:w-full"></span>
           </a>
         </div>

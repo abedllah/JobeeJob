@@ -1,13 +1,12 @@
-import VideoPlayer from './VideoPlayer';
 import { useState } from 'react';
-import JobDetailsModal from './JobDetailsModal';
+import InternshipDetailsModal from './InternshipDetailsModal';
 import { BsBookmark } from 'react-icons/bs';
 
-const JobListings = () => {
+const InternshipList = () => {
 
-  const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedInternship, setSelectedInternship] = useState(null);
 
-  const jobs = [
+  const Internships = [
     {
       id: 1,
       title: "Software Development Activity",
@@ -117,18 +116,18 @@ Compensation Package:`,
 
   return (
     <div className="bg-white rounded-xl border-2 border-gray-300 shadow-md p-6 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Featured Jobs</h2>
+      <h2 className="text-2xl font-bold mb-6 text-gray-800">Featured Internships</h2>
   
       <div className="space-y-0">
-        {jobs.map((job, index) => (
+        {Internships.map((internship, index) => (
           <div
-            key={job.id}
+            key={internship.id}
             className={`py-6 min-h-[200px] ${index !== 0 ? 'border-t-2 border-gray-300' : ''}`}
           >
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">{job.title}</h3>
-                <p className="text-gray-600">{job.company}</p>
+                <h3 className="text-lg font-semibold text-gray-900">{internship.title}</h3>
+                <p className="text-gray-600">{internship.company}</p>
               </div>
               <button className="text-indigo-600 hover:text-indigo-800 text-xl">
                 <BsBookmark />
@@ -136,18 +135,18 @@ Compensation Package:`,
             </div>
   
             <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-gray-500">
-              <span>📍 {job.location}</span>
+              <span>📍 {internship.location}</span>
               <span>•</span>
-              <span>💰 {job.salary}</span>
+              <span>💰 {internship.salary}</span>
               <span>•</span>
-              <span>⏱️ {job.type}</span>
+              <span>⏱️ {internship.type}</span>
             </div>
   
             <div className="mt-4 flex justify-between items-center">
-              <span className="text-sm text-gray-400">{job.posted}</span>
+              <span className="text-sm text-gray-400">{internship.posted}</span>
               <button
                 className="text-sm text-indigo-500 hover:underline flex items-center gap-1"
-                onClick={() => setSelectedJob(job)}
+                onClick={() => setSelectedInternship(internship)}
               >
                 Show More ↓
               </button>
@@ -156,14 +155,14 @@ Compensation Package:`,
         ))}
       </div>
   
-      {selectedJob && (
-        <JobDetailsModal
-          job={selectedJob}
-          onClose={() => setSelectedJob(null)}
+      {selectedInternship && (
+        <InternshipDetailsModal
+        internship={selectedInternship}
+          onClose={() => setSelectedInternship(null)}
         />
       )}
     </div>
   );
 };
 
-export default JobListings;
+export default InternshipList;
