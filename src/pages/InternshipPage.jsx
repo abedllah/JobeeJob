@@ -3,6 +3,7 @@ import Navbar from '../Component/Navbar'
 import RightBowl from '../Component/RightBowl'
 import LeftBowl from '../Component/LeftBowl'
 import InternshipList from '../Component/InternshipList'
+import JobSearchBar from '../Component/JobSearchBar'
 
 
 export default function InternshipPage() {
@@ -17,6 +18,7 @@ export default function InternshipPage() {
           
           {/* Colonne centrale - Contenu principal (60%) */}
           <div className="w-3/5 space-y-4">
+          <JobSearchBar />
           <InternshipList />
           </div>
           
